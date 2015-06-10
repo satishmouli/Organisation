@@ -8,4 +8,8 @@ class Database
   def new_department(parent_name, name, funding)
     @department_list[name] = Department.new(parent_name, name, funding)
   end
+
+  def get_funding(department_name)
+    @department_list[department_name].fundings
+  end
 end

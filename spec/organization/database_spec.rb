@@ -11,8 +11,16 @@ describe Database do
   context 'Adding new department' do
     it 'should add a new department to the list' do
       database = Database.new()
-      database.new_department('parent', 'name', 'nil')
+      database.new_department('parent', 'name', nil)
       expect(database.department_list['name']).to be_instance_of(Department)
+    end
+  end
+
+  context 'Checking funding of department' do
+    it 'should return the funding(=5000) of a department ("parent", "name", 5000)' do
+      database = Database.new()
+      database.new_department('parent', 'name', 5000)
+      expect(database.get_funding('name')).to eq(5000)
     end
   end
 end

@@ -6,4 +6,8 @@ class Department
     @name = department_name
     @funding = funding
   end
+
+  def fundings
+    @funding
+  end
 end
