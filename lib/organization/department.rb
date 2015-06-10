@@ -10,4 +10,8 @@ class Department
   def fundings
     @funding
   end
+
+  def add_funding(new_funding)
+    @funding += new_funding
+  end
 end

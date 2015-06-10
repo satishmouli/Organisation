@@ -12,4 +12,8 @@ class Database
   def get_funding(department_name)
     @department_list[department_name].fundings
   end
+
+  def add_funding(department_name, new_funding)
+    @department_list[department_name].add_funding(new_funding)
+  end
 end

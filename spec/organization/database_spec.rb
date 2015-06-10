@@ -23,4 +23,13 @@ describe Database do
       expect(database.get_funding('name')).to eq(5000)
     end
   end
+
+  context 'Adding funding' do
+    it 'should increase funding of a department to 5000 if current funding is 0' do
+      database = Database.new()
+      database.new_department('parent', 'name', 0)
+      database.add_funding('name', 5000)
+      expect(database.get_funding('name')).to eq(5000)
+    end
+  end
 end
