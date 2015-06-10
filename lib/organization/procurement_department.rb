@@ -1,8 +1,7 @@
 #JOB: Defines basic structure of any department
-class Department
+class ProcurementDepartment
   attr_reader :funding
-  def initialize(parent_department_name, department_name, funding)
-    @parent_department_name = parent_department_name
+  def initialize(department_name, funding)
     @name = department_name
     @funding = funding
   end
