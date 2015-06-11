@@ -12,4 +12,8 @@ class ManagerialDepartment
   def fundings
     @child_departments.map{ |dept| dept.fundings}.inject(:+)
   end
+
+   def inventory
+    @child_departments.map{ |dept| dept.inventory}.inject(:+)
+  end
 end
