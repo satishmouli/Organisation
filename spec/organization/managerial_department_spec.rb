@@ -1,4 +1,5 @@
 require 'spec_helper'
+require_relative '../factories.rb'
 
 describe ManagerialDepartment do
 
@@ -34,6 +35,13 @@ describe ManagerialDepartment do
       level22 = ManagerialDepartment.new('manager_3', [leaf3, leaf4])
       level1 = ManagerialDepartment.new('manager_1', [level21, level22])
       expect(level1.inventory).to eq(1700)
+    end
+  end
+
+  context 'check child using factory girl' do
+    it 'should return current funding of a department using factory girl' do
+      dept = FactoryGirl.build(:managerial_department, name:"marketing")
+      expect(dept.children).to eq([])
     end
   end
 

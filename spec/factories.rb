@@ -5,4 +5,10 @@ FactoryGirl.define do
     inventory nil
     initialize_with { new(name, funding, inventory) }
   end
+
+  factory :managerial_department, class: ManagerialDepartment do
+    name "department"
+	child_departments [] 
+    initialize_with { new(name, child_departments) }
+  end
 end

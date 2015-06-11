@@ -25,7 +25,7 @@ describe ProcurementDepartment do
 
   context 'check factory girl building' do
     it 'should create a dummy procurement department object with (dept_name, nil) of type Department' do
-      dept = FactoryGirl.build(:procurement_department, name: "test_dept", funding: 2000, inventory: 300)
+      dept = FactoryGirl.build(:procurement_department)
       expect(dept).to be_instance_of(ProcurementDepartment)
     end
   end
