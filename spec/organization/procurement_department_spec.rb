@@ -11,7 +11,7 @@ describe ProcurementDepartment do
   context 'check funding' do
     it 'should return current funding of a department' do
       dept = ProcurementDepartment.new('department', 5000, 200)
-      expect(dept.fundings).to eq(5000)
+      expect(dept.funding).to eq(5000)
     end
   end
 

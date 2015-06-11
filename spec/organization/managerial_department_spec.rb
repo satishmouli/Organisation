@@ -20,7 +20,7 @@ describe ManagerialDepartment do
       leaf4 = ProcurementDepartment.new('department_4', 2000, 200)
       level22 = ManagerialDepartment.new('manager_3', [leaf3, leaf4])
       level1 = ManagerialDepartment.new('manager_1', [level21, level22])
-      expect(level1.fundings).to eq(15000)
+      expect(level1.funding).to eq(15000)
     end
   end
 
